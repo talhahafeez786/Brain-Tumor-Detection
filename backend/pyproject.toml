@@ -5,7 +5,7 @@ description = "Default template for PDM package"
 authors = [
     {name = "Talha Hafeez and Muhammad Rizwan", email = "talhahafeez83@gmail.com"},
 ]
-dependencies = ["fastapi>=0.115.8", "uvicorn>=0.34.0", "python-multipart>=0.0.20", "motor>=3.7.0", "tensorflow>=2.18.0", "pillow>=11.1.0", "numpy>=2.0.2", "python-dotenv>=1.0.1", "pydantic>=2.10.6", "pytest>=8.3.4"]
+dependencies = ["fastapi>=0.115.8", "uvicorn>=0.34.0", "python-multipart>=0.0.20", "motor>=3.7.0", "tensorflow>=2.19.0", "pillow>=11.1.0", "numpy>=2.0.2", "python-dotenv>=1.0.1", "pydantic>=2.10.6", "pytest>=8.3.4", "pydantic-settings>=2.8.1", "pymongo>=4.11.2", "matplotlib>=3.10.1"]
 requires-python = ">=3.12"
 readme = "README.md"
 license = {text = "MIT"}
@@ -19,6 +19,6 @@ build-backend = "pdm.backend"
 distribution = true
 
 [tool.pdm.scripts]
-serve = "uvicorn brain_tumor.main:app --reload"
+server = "uvicorn brain_tumor.main:app --reload"
 lint = "ruff check --fix"
 typecheck = "mypy --strict"

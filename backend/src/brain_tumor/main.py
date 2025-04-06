@@ -1,12 +1,32 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from .routes import prediction
+from .config.setting import get_settings
 
+settings = get_settings()
 
 app = FastAPI(
-    title= " Brain Tumor Detection",
-    description="This is the tumor detection tool",
-    version="0.1"
+    title="TumorTech : Brain Tumor Detection API",
+    description="API for detecting brain tumors from MRI scans",
+    version="1.0.0"
 )
 
+# Configure CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# Include routes
+app.include_router(prediction.router, prefix="/api/v1", tags=["predictions"])
+
 @app.get("/")
-def root():
-    return {"message": "Welcome to the Brain Tumor Detection API!"}
+async def root():
+    return {"message": "Brain Tumor Detection API", "status": "active"}
+
+@app.get("/health")
+async def health_check():
+    return {"status": "healthy"}
