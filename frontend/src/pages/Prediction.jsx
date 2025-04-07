@@ -5,6 +5,7 @@ import ButtonGradient from "../assets/svg/ButtonGradient";
 import Header from "../component/Header";
 import Services from "../component/Services";
 import Section from "../component/Section";
+import Footer from "../component/Footer";
 
 const Prediction = () => {
   const [predictions, setPredictions] = useState([]);
@@ -41,6 +42,7 @@ const Prediction = () => {
           <PredictionResult predictions={predictions} />
         </div>
       </Section>
+      <Footer />
     </>
   );
 };
