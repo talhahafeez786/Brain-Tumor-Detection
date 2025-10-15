@@ -1,6 +1,6 @@
 # Brain Tumor Detection System
 
-A full-stack application for detecting brain tumors from medical images using machine learning.
+A full-stack application for detecting brain tumors from medical images using Deep learning.
 
 ![Brain Tumor Detection](https://img.shields.io/badge/Status-Active-brightgreen)
 ![License](https://img.shields.io/badge/License-MIT-blue)
@@ -115,4 +115,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Awesome AI/ML Libraries]
 - [Medical Imaging Datasets]
 - [Open Source Community]
+
 
