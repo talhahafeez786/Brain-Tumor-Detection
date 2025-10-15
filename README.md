@@ -47,13 +47,8 @@ A full-stack application for detecting brain tumors from medical images using ma
    git clone https://github.com/yourusername/brain-tumor-detection.git
    cd brain-tumor-detection
    ```
-
-2. Start the application:
-   ```bash
-   docker-compose up --build
-   ```
-
-3. Access the application at `http://localhost:3000`
+   
+2. Access the application at `http://localhost:3000`
 
 ### Manual Setup
 
@@ -120,3 +115,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Awesome AI/ML Libraries]
 - [Medical Imaging Datasets]
 - [Open Source Community]
+
